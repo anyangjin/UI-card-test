@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/nomalize.css" />
+    <link rel="stylesheet" href="newcard.css" />
+    <title>Card UI Create</title>
+    <style>
+      .card-item {
+}
+h2,
+p {
+  margin: 0px;
+  display: grid;
+}
+
+.card-item a {
+  text-decoration: none;
+  /* 글이 a태그로 되어 파랑색으로 보여질때 색 변경*/
+  color: #29363d;
+  display: block;
+  /* width: 288px; */
+  background: #ffffff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  /* 박스를 벗어났을때 감춤 처리를 하겠다. */
+}
+
+.card-item img {
+  width: 100%;
+  aspect-ratio: 288/196;
+  /* 화면 비율 가로비 / 세로비  */
+  object-fit: cover;
+  /* 이미지가 찌그러짐 비율이 안맞음 일때 사용. */
+  vertical-align: top;
+  /* 이미지에 여백이 생겼을때. */
+}
+
+.card-text {
+  padding: 24px 16px 16px;
+}
+
+.card-text .title {
+  font-size: 16px;
+  /* 텍스트를 먼저 한줄로 처리 */
+  white-space: nowrap;
+  overflow: hidden;
+  /* 넘어갔을떄 히든 처리 */
+  text-overflow: ellipsis;
+  /* 텍스트가 오버플로되었을때 말줄임 표시 */
+}
+
+.card-text .title + p {
+  /* p가 안바뀔거 같을때 + 사용 */
+  font-size: 12px;
+  color: #5a6a62;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  /* 생략해서 보이게 */
+  margin: 12px 0 16px;
+  line-height: 20px;
+  max-height: 40px;
+}
+
+.underLine {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 6px;
+}
+.container{
+  display: grid;
+  /* grid-template-columns: repeat(4, 288px); */
+  /* 반응형때문에 아래것으로 사용 */
+  /* grid-template-columns: repeat(4, 1fr); */
+   grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+   /* grid-template-columns: repeat(auto-fit, minmax(288px, 1fr)); */
+   gap: 32px 24px;
+   /* 로우 부터 적기 */
+   width:min(1224px, calc(100% - 60px));
+   margin: auto;
+   /* 마진 오토로 가운데 정렬까지 */
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Card UI</h1>
+    <div class="container">
+    <article class="card-item">
+      <a href="#">
+        <img src="./newimg/thumbnail.png" alt="" />
+        <div class="card-text">
+          <h2 class="title">그것을 피가 청춘을 것이다</h2>
+          <p>
+            청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히
+            청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에
+            같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가
+            뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고,
+            모래뿐일 작고 우리 평화스러운 있는가?
+          </p>
+          <p class="underLine">Read</p>
+        </div>
+      </a>
+    </article>
+ 
+    <article class="card-item">
+    <div 는 스타일의 목적으로 요소들을 묶는 역할
+    article은 독립적으로 사용가능한 영역에 사용
+    section은 앞뒤에 문맥과 연관이 있는 영역 -->
+    <a href="#">
+        <img src="./newimg/weniv-licat.png" alt="" />
+        <div class="card-text">
+          <h2 class="title">그것을 피가 청춘을 것이다</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            maiores unde amet doloremque ab eum, voluptatibus atque accusamus
+            laborum a id deserunt corrupti iusto consequatur magnam nesciunt
+            quos quibusdam assumenda?
+          </p>
+          <p class="underLine">Read</p>
+        </div>
+      </a>
+    </article>
+ 
+    <article class="card-item">
+      <a href="#">
+        <img src="./newimg/weniv-chilli.png" alt="" />
+        <div class="card-text">
+          <h2 class="title">그것을 피가 청춘을 것이다</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            maiores unde amet doloremque ab eum, voluptatibus atque accusamus
+            laborum a id deserunt corrupti iusto consequatur magnam nesciunt
+            quos quibusdam assumenda?
+          </p>
+          <p class="underLine">Read</p>
+        </div>
+      </a>
+    </article>
+      <article class="card-item">
+      <a href="#">
+        <img src="./newimg/weniv-chilli.png" alt="" />
+        <div class="card-text">
+          <h2 class="title">그것을 피가 청춘을 것이다</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            maiores unde amet doloremque ab eum, voluptatibus atque accusamus
+            laborum a id deserunt corrupti iusto consequatur magnam nesciunt
+            quos quibusdam assumenda?
+          </p>
+          <p class="underLine">Read</p>
+        </div>
+      </a>
+    </article>
+      <article class="card-item">
+      <a href="#">
+        <img src="./newimg/weniv-chilli.png" alt="" />
+        <div class="card-text">
+          <h2 class="title">그것을 피가 청춘을 것이다</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            maiores unde amet doloremque ab eum, voluptatibus atque accusamus
+            laborum a id deserunt corrupti iusto consequatur magnam nesciunt
+            quos quibusdam assumenda?
+          </p>
+          <p class="underLine">Read</p>
+        </div>
+      </a>
+    </article>
+      <article class="card-item">
+      <a href="#">
+        <img src="./newimg/weniv-chilli.png" alt="" />
+        <div class="card-text">
+          <h2 class="title">그것을 피가 청춘을 것이다</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            maiores unde amet doloremque ab eum, voluptatibus atque accusamus
+            laborum a id deserunt corrupti iusto consequatur magnam nesciunt
+            quos quibusdam assumenda?
+          </p>
+          <p class="underLine">Read</p>
+        </div>
+      </a>
+    </article>
+      <article class="card-item">
+      <a href="#">
+        <img src="./newimg/weniv-chilli.png" alt="" />
+        <div class="card-text">
+          <h2 class="title">그것을 피가 청춘을 것이다</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            maiores unde amet doloremque ab eum, voluptatibus atque accusamus
+            laborum a id deserunt corrupti iusto consequatur magnam nesciunt
+            quos quibusdam assumenda?
+          </p>
+          <p class="underLine">Read</p>
+        </div>
+      </a>
+    </article>
+    </div>
+  </body>
+</html>
